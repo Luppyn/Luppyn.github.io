@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<title>My first three.js app</title>
+		<script src="https://kit.fontawesome.com/08c2597238.js" crossorigin="anonymous"></script>
+		</head>
+	<body>
+		
+		<div class="container">
+			<div class="box">
+				<i class="fas fa-sync" onclick="C1()"></i>
+				<h2 class="TopText">LOGIN</h2>
+
+				<input type="text" placeholder="Nome">
+				<input type="number" placeholder="Idade" step="0.01">
+				<input type="email" placeholder="E-mail">
+				<input type="password" placeholder="Senha">
+				
+			</div>
+		</div>
+
+		<script type="module" src="script.js">
+		 import interact from 'https://cdn.interactjs.io/v1.9.20/interactjs/index.js'
+		 interact('.item').draggable({
+   		 	onmove(event) {
+      			console.log(event.pageX, event.pageY)
+    				},
+  			})
+			</script>
+	</body>
+</html>
