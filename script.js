@@ -1,5 +1,12 @@
 import interact from 'https://cdn.interactjs.io/v1.9.20/interactjs/index.js'
 
+if (navigator.language != "pt-BR") {
+    document.getElementsByClassName('Inome')[0].placeholder == "Name"
+    document.getElementsByClassName('Iidade')[0].placeholder == "Age"
+    document.getElementsByClassName('Isenha')[0].placeholder == "Password"
+  }
+  
+
 const IntPosition = {x: 0, y: 0}
 interact(".box")
 	.draggable({
