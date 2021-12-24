@@ -69,16 +69,16 @@ animate();
 
 function animate() {
 
-    starGeometry.vertices.forEach(p=>{
-        p.velocity += p.acceleration;
-        p.y -= p.velocity;
-    if( p.y < -200) {
-        p.y = 200;
-        p.velocity = 0
-    }
-});
+    let geometry = new THREE.DodecahedronGeometry(size, 1);
+let vertices = geometry.attributes.position.array;
+for(let i = 0; i < geometry.attributes.position.count; i++){
+  vertices[ i * 3 + 0 ] += 0 - Math.random() * (size / 4);
+  vertices[ i * 3 + 1 ] += 0 - Math.random() * (size / 4);
+  vertices[ i * 3 + 2 ] += 0 - Math.random() * (size / 4);
+}
+geometry.attributes.position.needsUpdate = true;
 
-    starGeometry.vertices.push(star);
+    starGeometry.verticesNeedUpdate = true;
     stars.rotation.y += 0.002;
     stars.rotation.x = -1.5;
     renderer.render(scene,camera);
