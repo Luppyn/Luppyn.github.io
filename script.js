@@ -2,15 +2,7 @@ import interact from 'https://cdn.interactjs.io/v1.9.20/interactjs/index.js'
 
 // LOGIN PARA REGISTRO
 document.getElementsByClassName("fas fa-sync")[0].onclick = (C1)=>{
-    let i = 1
-    for(i = 0; i < 2; i + 1){
-        console.log(i)
-        document.getElementsByClassName("TopText")[0].innerHTML = 'REGISTRO'
-    }
-    for(;i != 1; i-1){
-        console.log(i)
-        document.getElementsByClassName("TopText")[0].innerHTML = 'LOGIN'
-    }
+
 }
 
 // ELEMENTO ARRASTÁVEL
@@ -26,7 +18,9 @@ interact(".box")
 		            }
 	            })
 
-// MODIFICAÇÃO AUTOMÁTICA DE IDIOMAS
+
+                
+// MODIFICAÇÃO AUTOMÁTICA DE IDIOMAS [ESTRAGADO]
 if (navigator.language != "pt-BR") {
     document.getElementsByClassName('Inome')[0].placeholder == "Name"
     document.getElementsByClassName('Iidade')[0].placeholder == "Age"
